@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>City.OS | Traffic Logistics</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="app-container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2><i class="fas fa-city"></i> CITY.OS</h2>
+      </div>
+       <ul class="nav-links">
+        <a href="index.html" class="nav-item"><i class="fas fa-chart-pie"></i> Overview Dashboard</a>
+        <a href="traffic.html" class="nav-item active"><i class="fas fa-car"></i> Traffic & Transport</a>
+        <a href="pollution.html" class="nav-item"><i class="fas fa-leaf"></i> Environment Check</a>
+        <a href="electricity.html" class="nav-item"><i class="fas fa-bolt"></i> Power Distribution</a>
+        <a href="alerts.html" class="nav-item"><i class="fas fa-bell"></i> Emergency Alerts</a>
+        <a href="analytics.html" class="nav-item"><i class="fas fa-server"></i> System Data Logs</a>
+        <a href="settings.html" class="nav-item"><i class="fas fa-cog"></i> Configuration</a>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div class="page-title"><i class="fas fa-car"></i> Traffic & Transportation</div>
+        <div class="topbar-right">
+          <div class="datetime">Loading time...</div>
+          <div class="controls"><i class="fas fa-envelope"></i></div>
+          <div class="user-profile">
+            <div class="avatar-img">SB</div>
+            <div class="user-info">
+              <span>Sasi Bhushan</span>
+              <span style="color:var(--text-muted)">Chief Administrator</span>
+            </div>
+          </div>
+          <button id="theme-toggle" class="btn" title="Toggle Theme"><i class="fas fa-moon"></i></button>
+        </div>
+      </header>
+
+      <div class="workspace">
+        <div class="workspace-header">
+          <div>
+            <h1>Daily Traffic Flow</h1>
+            <p>Monitor how busy the roads are right now and see if there are any broken traffic lights causing backups.</p>
+          </div>
+        </div>
+
+        <div class="grid-cols-2">
+          
+          <div class="card" style="grid-column: span 2;">
+            <div class="card-header">
+              <h3><i class="fas fa-map"></i> Live Map Overview</h3>
+            </div>
+            <p class="card-explainer">A visual representation of the city streets. Green means clear, red means heavy traffic.</p>
+            <div style="height: 350px; background: rgba(0,0,0,0.2); border: 1px dashed var(--panel-border); border-radius: 8px; display: flex; justify-content: center; align-items: center; flex-direction:column; color: var(--text-muted);">
+              <i class="fas fa-map-marked-alt" style="font-size: 4rem; margin-bottom: 16px; color: var(--panel-border);"></i>
+              <span>[Map Image System Offline]</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h3><i class="fas fa-tachometer-alt"></i> Current Congestion Level</h3>
+            </div>
+            <p class="card-explainer">A score from 1 to 10 showing how blocked the roads are. 10 is gridlock.</p>
+            <div style="display:flex; justify-content:center; align-items:center; height:100px;">
+              <h1 id="traffic-index" style="font-size: 4rem; color: var(--warning-color); font-weight:800;">4.2 / 10</h1>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h3><i class="fas fa-traffic-light"></i> Smart Traffic Lights</h3>
+            </div>
+            <p class="card-explainer">Shows whether the automated light controllers are functioning properly in key areas.</p>
+             <table class="styled-table mt-2">
+              <thead>
+                <tr>
+                  <th>Intersection Location</th>
+                  <th>Hardware Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Northgate Intersection</td>
+                  <td><span class="badge success">Working Properly</span></td>
+                </tr>
+                 <tr>
+                  <td>South Main Highway</td>
+                  <td><span class="badge success">Working Properly</span></td>
+                </tr>
+                 <tr>
+                  <td>East Bridge Entryway</td>
+                  <td><span class="badge warning">Needs Repair Soon</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

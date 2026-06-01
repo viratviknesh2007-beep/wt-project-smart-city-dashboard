@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>City.OS | Environmental</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="app-container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2><i class="fas fa-city"></i> CITY.OS</h2>
+      </div>
+       <ul class="nav-links">
+        <a href="index.html" class="nav-item"><i class="fas fa-chart-pie"></i> Overview Dashboard</a>
+        <a href="traffic.html" class="nav-item"><i class="fas fa-car"></i> Traffic & Transport</a>
+        <a href="pollution.html" class="nav-item active"><i class="fas fa-leaf"></i> Environment Check</a>
+        <a href="electricity.html" class="nav-item"><i class="fas fa-bolt"></i> Power Distribution</a>
+        <a href="alerts.html" class="nav-item"><i class="fas fa-bell"></i> Emergency Alerts</a>
+        <a href="analytics.html" class="nav-item"><i class="fas fa-server"></i> System Data Logs</a>
+        <a href="settings.html" class="nav-item"><i class="fas fa-cog"></i> Configuration</a>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div class="page-title"><i class="fas fa-leaf"></i> Environmental Monitoring</div>
+        <div class="topbar-right">
+          <div class="datetime">Loading time...</div>
+          <div class="controls"><i class="fas fa-envelope"></i></div>
+          <div class="user-profile">
+            <div class="avatar-img">SB</div>
+            <div class="user-info">
+              <span>Sasi Bhushan</span>
+              <span style="color:var(--text-muted)">Chief Administrator</span>
+            </div>
+          </div>
+          <button id="theme-toggle" class="btn" title="Toggle Theme"><i class="fas fa-moon"></i></button>
+        </div>
+      </header>
+
+      <div class="workspace">
+        <div class="workspace-header">
+          <div>
+            <h1>City Pollution & Climate</h1>
+            <p>Ensure the air is safe to breathe for citizens and track the city's green initiatives.</p>
+          </div>
+        </div>
+
+        <div class="grid-cols-2">
+          
+           <div class="card">
+            <div class="card-header">
+              <h3><i class="fas fa-smog"></i> Air Quality Measurements</h3>
+            </div>
+            <p class="card-explainer">Bars will fill up as pollution gets worse. Lower values are better.</p>
+            
+            <div style="margin-bottom: 28px;">
+              <div style="display:flex; justify-content:space-between; margin-bottom:8px; font-weight: 500;">
+                <span>Overall Air Quality Score (AQI)</span> <span style="color:var(--success-color)">42 (Safe/Good)</span>
+              </div>
+              <div class="bar-track"><div class="bar-fill fill-success" style="width: 42%;"></div></div>
+            </div>
+
+            <div style="margin-bottom: 28px;">
+              <div style="display:flex; justify-content:space-between; margin-bottom:8px; font-weight: 500;">
+                <span>Dust & Smoke Levels (PM2.5)</span> <span style="color:var(--warning-color)">65  (Moderate risk)</span>
+              </div>
+              <div class="bar-track"><div class="bar-fill fill-warning" style="width: 65%;"></div></div>
+            </div>
+
+            <div style="margin-bottom: 24px;">
+              <div style="display:flex; justify-content:space-between; margin-bottom:8px; font-weight: 500;">
+                <span>Carbon Dioxide Emissions</span> <span style="color:var(--primary-color)">Normal Level</span>
+              </div>
+              <div class="bar-track"><div class="bar-fill fill-primary" style="width: 40%;"></div></div>
+            </div>
+
+          </div>
+
+          <div class="card">
+             <div class="card-header">
+              <h3><i class="fas fa-tree"></i> Eco-Friendly Goals</h3>
+            </div>
+            <p class="card-explainer">How the city is progressing towards its green living targets this year.</p>
+             <table class="styled-table mt-4">
+              <thead>
+                <tr>
+                  <th>Goal Description</th>
+                  <th>Current Score</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>New Trees Planted in Parks</td>
+                  <td>14,203 Trees</td>
+                </tr>
+                 <tr>
+                  <td>Reducing Factory Smog</td>
+                  <td><span class="badge success">Ahead of Schedule</span></td>
+                </tr>
+                 <tr>
+                  <td>Recycling Processing Plan</td>
+                  <td>7,890 Tons Processed</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

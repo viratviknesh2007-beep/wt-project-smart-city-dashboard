@@ -1,0 +1,29 @@
+{
+  "settings": {
+    "adminEmail": "admin@cityos.gov",
+    "syncFrequency": "5sec",
+    "storageQuota": "15"
+  },
+  "analyticsHistory": [
+    333,
+    335,
+    334,
+    338,
+    342,
+    340,
+    336,
+    334,
+    339,
+    338,
+    341,
+    343,
+    346,
+    345,
+    344,
+    349,
+    350,
+    351,
+    349,
+    348
+  ]
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>City.OS | Dashboard Overview</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="app-container">
+    
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2><i class="fas fa-city"></i> CITY.OS</h2>
+      </div>
+      <ul class="nav-links">
+        <a href="index.html" class="nav-item active"><i class="fas fa-chart-pie"></i> Overview Dashboard</a>
+        <a href="traffic.html" class="nav-item"><i class="fas fa-car"></i> Traffic & Transport</a>
+        <a href="pollution.html" class="nav-item"><i class="fas fa-leaf"></i> Environment Check</a>
+        <a href="electricity.html" class="nav-item"><i class="fas fa-bolt"></i> Power Distribution</a>
+        <a href="alerts.html" class="nav-item"><i class="fas fa-bell"></i> Emergency Alerts</a>
+        <a href="analytics.html" class="nav-item"><i class="fas fa-server"></i> System Data Logs</a>
+        <a href="settings.html" class="nav-item"><i class="fas fa-cog"></i> Configuration</a>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      
+      <!-- Top Navigation -->
+      <header class="topbar">
+        <div class="page-title"><i class="fas fa-chart-pie"></i> Executive Overview</div>
+        <div class="topbar-right">
+          <div class="datetime">Loading time...</div>
+          <div class="controls"><i class="fas fa-envelope"></i></div>
+          <div class="user-profile">
+            <div class="avatar-img">SB</div>
+            <div class="user-info">
+              <span>Sasi Bhushan</span>
+              <span style="color:var(--text-muted)">Chief Administrator</span>
+            </div>
+          </div>
+          <button id="theme-toggle" class="btn" title="Toggle Theme"><i class="fas fa-moon"></i></button>
+        </div>
+      </header>
+
+      <!-- Workspace area -->
+      <div class="workspace">
+        <div class="workspace-header">
+          <div>
+            <h1>City Health Dashboard</h1>
+            <p>Welcome back. Here is a high-level, easy-to-read summary of how our city is performing today. All systems appear to be running smoothly.</p>
+          </div>
+        </div>
+
+        <div class="grid-cols-4" style="margin-bottom: 32px;">
+          <!-- KPI Cards with clear language -->
+          <div class="card kpi-card">
+            <span class="kpi-title"><div class="status-dot active"></div> System Online Status</span>
+            <span class="kpi-value" id="dash-network-up">99.9%</span>
+            <span class="kpi-change positive"><i class="fas fa-check-circle"></i> Servers are running normally</span>
+          </div>
+          <div class="card kpi-card">
+            <span class="kpi-title"><div class="status-dot error"></div> Active Emergencies</span>
+            <span class="kpi-value" id="dash-active-num">3</span>
+            <span class="kpi-change negative"><i class="fas fa-info-circle"></i> Requires dispatcher attention</span>
+          </div>
+          <div class="card kpi-card">
+            <span class="kpi-title"><div class="status-dot active"></div> Power Grid Usage</span>
+            <span class="kpi-value">72%</span>
+            <span class="kpi-change neutral"><i class="fas fa-battery-half"></i> Safe consumption limits</span>
+          </div>
+          <div class="card kpi-card">
+            <span class="kpi-title"><div class="status-dot active"></div> Population Tracked</span>
+            <span class="kpi-value">8.4M</span>
+            <span class="kpi-change positive"><i class="fas fa-users"></i> Sensors actively covering city</span>
+          </div>
+        </div>
+
+        <div class="grid-cols-2">
+          <!-- Recent Activity Table -->
+          <div class="card">
+            <div class="card-header">
+              <h3><i class="fas fa-clipboard-list"></i> Recent Actions Log</h3>
+            </div>
+            <p class="card-explainer">A simple log of the most recent automated fixes or issues detected by the city sensors.</p>
+            <table class="styled-table">
+              <thead>
+                <tr>
+                  <th>Time Logged</th>
+                  <th>Area / Subsystem</th>
+                  <th>Current Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>10:42 AM</td>
+                  <td>Traffic Lights - North Point</td>
+                  <td><span class="badge success"><i class="fas fa-check"></i> Fixed Automatically</span></td>
+                </tr>
+                <tr>
+                  <td>10:15 AM</td>
+                  <td>Water Pumping Station B</td>
+                  <td><span class="badge warning"><i class="fas fa-exclamation-triangle"></i> Needs Inspection</span></td>
+                </tr>
+                <tr>
+                  <td>09:30 AM</td>
+                  <td>Downtown Power Supply</td>
+                  <td><span class="badge success"><i class="fas fa-check"></i> Working Normally</span></td>
+                </tr>
+                <tr>
+                  <td>09:02 AM</td>
+                  <td>Highway 12 Speed Cameras</td>
+                  <td><span class="badge danger"><i class="fas fa-times"></i> Connection Lost</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Quick System Diagnostic -->
+          <div class="card">
+            <div class="card-header">
+              <h3><i class="fas fa-server"></i> Server Health Summary</h3>
+            </div>
+             <p class="card-explainer">Shows how much of our computer resources are currently being used to keep the city running.</p>
+            <div class="mt-2">
+              <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                <span style="font-weight: 500;">Datacenter Cooling Units</span> <span>90% Used</span>
+              </div>
+              <div class="bar-track"><div class="bar-fill fill-success" style="width: 90%;"></div></div>
+            </div>
+            <div class="mt-4">
+              <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                <span style="font-weight: 500;">AI Camera Processing</span> <span>75% Capacity</span>
+              </div>
+              <div class="bar-track"><div class="bar-fill fill-warning" style="width: 75%;"></div></div>
+            </div>
+            <div class="mt-4">
+              <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                <span style="font-weight: 500;">Emergency Backup Power</span> <span>100% Ready</span>
+              </div>
+              <div class="bar-track"><div class="bar-fill fill-primary" style="width: 100%;"></div></div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
