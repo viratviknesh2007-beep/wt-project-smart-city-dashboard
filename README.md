@@ -1,6 +1,6 @@
 SMART-CITY-DASHBOARD
 
-WEBSITE LINK: smartcity-health-dashboard.netlify.app
+WEBSITE LINK: https://smartcity-health-dashboard.netlify.app/
 
 For our Web Development project we are asked to create one project using html as a primary programming language and we are done that.
 
